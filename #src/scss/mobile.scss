@@ -1,0 +1,52 @@
+@media (max-width: 1200px) {
+  .catalog__inner,
+  .gift__inner,
+  .goods__inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bonus__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .slick {
+    padding-left: 8em;
+  }
+
+  .calendar__text h2 {
+    font-size: 1.33em;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog__inner,
+  .gift__inner,
+  .goods__inner,
+  .bonus__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog__item.item__grid,
+  .gift__item.item__grid,
+  .goods__item.item__grid {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 425px) {
+  .catalog__inner,
+  .gift__inner,
+  .goods__inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .catalog__item.item__grid,
+  .gift__item.item__grid,
+  .goods__item.item__grid {
+    grid-column: span 1;
+  }
+}
