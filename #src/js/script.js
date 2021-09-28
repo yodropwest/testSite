@@ -24,3 +24,13 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('no-webp')
   }
 })
+
+function mobile__menu() {
+  let menu = document.querySelector('.mobile__header__bottom')
+
+  if (menu.style.display === 'block') {
+    menu.style.display = 'none'
+  } else {
+    menu.style.display = 'block'
+  }
+}

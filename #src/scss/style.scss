@@ -25,7 +25,6 @@ $paddingFour: 0 2.6em;
   box-sizing: content-box;
 }
 
-
 body {
   font-family: 'Rubik', sans-serif;
   max-width: 1920px;
@@ -87,9 +86,9 @@ h2 {
 
 .main__title {
   position: absolute;
-  font-size: 24em;
+  font-size: 15vw;
   color: rgba(42, 51, 71, 0.02);
-  top: 0;
+  bottom: 0;
   z-index: -1;
   margin-left: 0.2em;
 }
@@ -173,7 +172,17 @@ h2 {
     background: none;
     outline: none;
     font-size: 1.2em;
-    max-width: 7.6em;
+    max-width: 100%;
+    transition: 0.2s linear;
+
+    &:focus {
+      background-color: $colorWhite;
+      color: $colorDarkBlue;
+
+      &::placeholder {
+        color: $colorDarkBlue;
+      }
+    }
   }
 
   input::placeholder {
@@ -373,13 +382,14 @@ h2 {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.33em;
+  grid-gap: 0.8em;
 }
 
 .goods__items {
   position: relative;
   height: 33.33em;
   background: rgba(255, 255, 255, 1);
+  padding: 1.5em;
 }
 
 .goods__item {
@@ -560,7 +570,7 @@ h2 {
   margin-bottom: 7.33em;
 
   .news__inner__title {
-    font-size: 12.33em;
+    font-size: 10vw;
     color: rgba(42, 51, 71, 0.15);
     font-weight: 500;
     line-height: 1em;
@@ -638,7 +648,7 @@ h2 {
 .contact__inner {
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   grid-gap: 0.33em;
 }
 
@@ -760,6 +770,72 @@ h2 {
       &:nth-child(2) {
         text-align: center;
       }
+    }
+  }
+}
+
+// Mobile-Menu
+
+.mobile__header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.8em;
+
+  a {
+    height: 1em;
+    width: 1em;
+  }
+
+  .mobile__logo {
+    width: auto;
+    height: auto;
+  }
+
+  .mobile__header__right {
+    position: relative;
+    display: block;
+    img {
+      height: 1em;
+      width: 1em;
+    }
+  }
+}
+
+.mobile__header__menuSearh {
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+  }
+}
+
+.mobile__header__burger {
+  img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.mobile__header__bottom {
+  position: absolute;
+  right: 0;
+  top: 5em;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+
+  .menu__link {
+    margin: 0;
+    list-style-type: none;
+    margin-top: 0.5em;
+  }
+
+  a {
+    color: $colorDarkBlue;
+
+    &:hover {
+      border-bottom: 1px solid #000;
     }
   }
 }
