@@ -1,7 +1,9 @@
-@media (min-width: 325px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 425px) {
   .catalog__inner,
   .gift__inner,
-  .goods__inner {
+  .goods__inner,
+  .bonus__inner,
+  .contact__inner {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -66,11 +68,77 @@
   }
 
   .slick {
-    padding: 3em;
+    padding: 2em;
   }
 
   .slider__title {
+    font-size: 1.5em;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .btn__blue {
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+  }
+
+  .mobile__logo img {
+    height: 2em;
+  }
+
+  .calendar__text h2 {
     font-size: 2em;
+  }
+
+  .calendar__text p {
+    font-size: 1em;
+  }
+
+  .news__item {
+    margin-left: 0;
+  }
+
+  .contact__item {
+    padding: 3em 2em;
+
+    span {
+      font-size: 2em;
+    }
+
+    .main__link span {
+      font-size: 0.8em;
+    }
+
+    .contact__show {
+      font-size: 0.8em;
+    }
+  }
+
+  .contact__address,
+  .contact__email {
+    span {
+      font-size: 1em;
+    }
+  }
+
+  .footer__menu {
+    padding: 1.4em 2.4em;
+
+    ul li + li {
+      margin-top: 0.5em;
+    }
+  }
+
+  .footer__bottom {
+    padding: 1.4em 2.4em;
+
+    .footer__menu__bottom {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      text-align: center;
+    }
   }
 }
 
@@ -144,9 +212,30 @@
   .header {
     display: none;
   }
+
+  .footer__menu {
+    ul {
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer__menu__bottom {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .main__link__wrapper--bonus__wrap {
+    margin-top: 1em;
+  }
+
+  .main__header__link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .catalog__inner,
   .gift__inner,
   .goods__inner {
@@ -157,7 +246,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .menu {
+  .header {
     display: none;
   }
 
@@ -171,5 +260,57 @@
 
   .footer__menu ul {
     font-size: 0.8em;
+  }
+
+  .menu {
+    display: flex;
+    margin-left: 13em;
+
+    a {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .menu {
+    display: flex;
+    margin-left: 8em;
+    flex-wrap: wrap;
+
+    li {
+      font-size: 1em;
+    }
+  }
+
+  .menu__sign {
+    a {
+      font-size: 1em;
+    }
+  }
+
+  .search__inner input {
+    font-size: 1.09em;
+  }
+
+  .mobile__header {
+    display: none;
+  }
+}
+
+@media (min-width: 1601px) {
+  .menu {
+    display: flex;
+    margin-left: 13em;
+  }
+
+  .menu__sign {
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  .mobile__header {
+    display: none;
   }
 }
